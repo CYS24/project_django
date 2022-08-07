@@ -1,0 +1,10 @@
+<p><h5>hello <span style='color:blue'>{{name}}</span>..hello?</h5></p>
+{% with myname='kimleepark' %}
+<p>my name is <font color='green'>{{myname}}</font>. thank you</p>
+{% endwith %}
+
+<ul>
+    {% for address in addresses %}
+    <li>{{address.name}}</li>
+    {% endfor %}
+</ul>

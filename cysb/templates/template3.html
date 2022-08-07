@@ -1,0 +1,33 @@
+{% for x in fruits %}
+    <div>{{x}}</div>
+{% endfor %}
+</br>
+{% for x in cars %}
+    <div>{{x.brand}} / {{x.model}} / {{x.year}}</div>
+{% endfor %}
+</br>
+{% for x in addresses reversed %}
+    <span style='font-weight:bold'>{{x.id}}</span>
+    <div>{{x.name}} / {{x.addr}} / {{x.rdate}}</div>
+{% endfor %}
+</br>
+{% for x in emptyobj %}
+    <li>x</li>
+    {% empty %}
+    <li>void</li>
+{% endfor %}
+</br>
+{% comment %} forloop은 for문 안에서만 사용가능 {% endcomment %}
+{% for x in fruits %}    
+    <li>{{forloop.revcounter}}</li>    
+    <li>{{forloop.counter0}}</li>           
+{% endfor %}
+</br>
+{% for x in fruits %}
+    <li {% if forloop.first %}
+            style='background-color:orange'
+        {% elif forloop.last %}
+            style='background-color:pink'
+        {% endif %}
+    >{{x}}</li>           
+{% endfor %}

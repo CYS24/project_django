@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<center>
+    <h1>Login fisrt</h1>
+    <br>
+    {% if request.session.user %}
+        <a href="logout">로그아웃</a>
+    {% else %}
+        <a href="login">로그인</a>
+    {% endif %}
+
+    <h2>cys's index.html</h2>
+    <a href='list'>회원</a href><br/>
+    
+    <h2>cys's board</h2>
+    <a href='blist'>입장</a href>
+    <br/><br/></br>
+    <a href='template1/'>template1<a> &nbsp;&nbsp;
+    <a href='template2/'>template2<a> &nbsp;&nbsp;
+    <a href='template3/'>template3<a> &nbsp;&nbsp;
+    <a href='template4/'>template4<a> 
+    </br>
+    <a href='template5/'>template5<a> &nbsp;&nbsp;
+    <a href='template6/'>template6<a> &nbsp;&nbsp;
+    <a href='template7/'>template7<a> &nbsp;&nbsp;
+    <a href='template8/'>template8<a> 
+    </br>
+</center>

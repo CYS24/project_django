@@ -1,0 +1,8 @@
+{% if not request.session.user %}
+    <script language='javascript'>
+        alert('login first to use our website');
+        //console.log('access denied at template7'); //웹브라우저 콘솔에 로그 남기기
+        //location.href='../'; //아예 리셋
+        history.back(); //캐시메모리에 저장된부분으로 돌아감 - 기록이 저장
+    </script>
+{% endif %}

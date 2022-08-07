@@ -1,0 +1,318 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>이상형 월드컵 - [퀄리티UP] 여자 아이돌 이상형 월드컵 (총290명) PIKU</title>
+<meta name="title" content="이상형 월드컵 - [퀄리티UP] 여자 아이돌 이상형 월드컵 (총290명), 이상형 월드컵 만들기 PIKU" />
+<meta property="og:title" content="이상형 월드컵 - [퀄리티UP] 여자 아이돌 이상형 월드컵 (총290명), 이상형 월드컵 만들기 PIKU" />
+<meta name="description" content="이상형 월드컵 - [퀄리티UP] 여자 아이돌 이상형 월드컵 (총290명)을 즐겨보세요. 이상형월드컵을 직접 만들수도 있습니다" />
+<meta property="og:description" content="이상형 월드컵 - [퀄리티UP] 여자 아이돌 이상형 월드컵 (총290명)을 즐겨보세요. 이상형월드컵을 직접 만들수도 있습니다" />
+<meta name="keywords" content="이상형 월드컵, 이상형 월드컵 사이트, [퀄리티UP] 여자 아이돌 이상형 월드컵 (총290명), 여자 아이돌 이상형 월드컵, 남자 아이돌 이상형 월드컵, 음식 이상형 월드컵, 여캠 이상형 월드컵,이상형 월드컵 만들기" />
+<link rel="canonical" href="https://www.piku.co.kr/w/5u2qx2" />
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link href="css/animate.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<script src="js/main.js"></script>
+<script src="js/plugins/pace/pace.min.js"></script>
+<script src="js/pow.js"></script>
+<style>
+@media screen and (max-height: 600px) { .tad { display: none; } .hads{ height:60px; } }
+
+</style>
+</head>
+<body class="top-navigation">
+<script type="text/javascript">
+/*$(window).on('load', function(){
+});*/
+$(document).ready(function() {
+	
+	if ($(window).height()>414)
+	{
+	}
+	$('#rstart').click(function() {
+		if($("form")[0].checkValidity()) {
+			$.ajax({
+					type : "POST",
+					url : "play_reset.php",
+					data : {tr : $('#selRound').val(), pw : $('#pw').val(), op : $('#selRound').attr('data-op'), u : $('#selRound').attr('data-u')},
+					async: false,
+					success : function(data){
+						if(data == "true") {
+							window.location.href = $('#selRound').attr('data-u');
+						}
+						else {
+							$("#otext").html("비밀번호가 올바르지 않습니다.");	
+						}
+					}
+			});
+			return false;
+		}else console.log("invalid form");
+	});
+});
+</script>
+<div id="wrapper">
+<div id="page-wrapper" class="gray-bg" style="min-height:100%">
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-105028677-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-105028677-1');
+</script>
+<div class="row border-bottom white-bg tad">
+<nav class="navbar navbar-static-top" role="navigation">
+<div class="navbar-header">
+<button aria-controls="navbar" aria-expanded="false" data-target="#navbar" data-toggle="collapse" class="navbar-toggle collapsed" type="button">
+<i class="fa fa-reorder"></i>
+</button>
+</div>
+<div class="navbar-collapse collapse" id="navbar">
+<ul class="nav navbar-nav">
+</ul>
+<ul class="nav navbar-top-links navbar-right">
+</ul>
+</div>
+</nav>
+</div>
+<div class="tad"><br /></div>
+<div id="ads" class="hads">
+</div>
+<script>
+$('#logout').click(function() {
+	$.ajax({
+		url: 'https://www.piku.co.kr/w/logout',
+		success: function(data){
+			window.location.href = "/";
+		}
+	});
+});
+</script>
+<div class="wrapper wrapper-content" style="padding:0">
+<div class="modal inmodal" id="divRound" tabindex="-1" role="dialog" aria-hidden="true">
+<div class="modal-dialog">
+<div class="modal-content animated fadeIn">
+<div class="modal-header" style="padding:10px">
+<h4 class="modal-title">월드컵 이름</h4>
+<small class="modal-desc">월드컵 설명</small>
+</div>
+<form role="form">
+<div class="modal-body" style="padding:10px">
+<div class="row">
+<div class="col-sm-12">
+<label>총 라운드를 선택하세요.</label>
+<select class="form-control" id="selRound" name="290" data-op="open" data-u="5u2qx2">
+<option value='256'>256강</option><option value='128'>128강</option><option value='64'>64강</option><option value='32' selected>32강</option><option value='16'>16강</option><option value='8'>8강</option><option value='4'>4강</option> </select>
+<div class="m-b" id="rtext">총 290명의 후보 중 무작위 32명이 대결합니다.</div>
+</div>
+</div>
+</div>
+<div class="modal-footer">
+<button type="submit" id="rstart" class="btn btn-primary col-xs-12">시작하기</button>
+</div>
+</form>
+</div>
+</div>
+</div>
+<button type="button" class="btn btn-primary" id="divShow" data-toggle="modal" data-target="#divRound" data-backdrop="static"></button>
+<script> $('#divShow').click(); </script>
+</div>
+</div>
+</div>
+<script>
+function onYouTubeIframeAPIReady() {
+
+
+
+}
+
+
+
+</script>
+<script>
+	$.cround= function(co,round) {
+		$('#rtext').html('총 ' + co + '명의 후보 중 무작위 ' + round + '명이 대결합니다.');
+	};
+	$('#selRound').change(function() {
+		$.cround($(this).attr("name"), $(this).val());
+	});
+
+	$('#rank').click(function() {
+		window.location.href = "https://www.piku.co.kr/w/rank/5u2qx2";
+	});
+	$('#list').click(function() {
+		window.location.href = "https://www.piku.co.kr/";
+	});
+	$('.cancel').click(function() {
+		window.location.href = "https://www.piku.co.kr/";
+	});
+	$('#share').click(function() {
+		$('#shareurl').select();
+		try {
+			var successful = document.execCommand('copy');
+			alert("주소가 복사되었습니다. 원하는 곳에 붙여넣기 해주세요.");
+			}
+		catch (err) {
+			alert("실패하였습니다.");
+		}
+	});
+	$(document).ready(function () {
+		$('#wleft, #rleft').mouseover(function () {
+		});
+		$('#wright').mouseover(function () {
+		});
+		
+		$('#wleft').one( "click", function () {
+			$.Animate('wright', 'fadeOutRightBig');
+			$('#wleft').css({backgroundPosition: 'center center'});
+			$('#wleft').css({'text-align': 'center'});
+			$('#versus').hide();
+			$('#wrightn').hide();
+			$('#lbtn').hide();
+			$('#wleftn').css({'text-align':'center','padding-right':'0'}); 
+			$('#wleft').animate({
+				width:'100%',
+				maxWidth:'100%'
+			},500,function(){
+			$.Movepg($('#wleft').attr("name"),$('#wright').attr("name"));
+			});
+		});
+		$('#wright').one( "click", function () {
+			$.Animate('wleft', 'fadeOutLeftBig');
+			$('#wright').css({backgroundPosition: 'center center'});
+			$('#wright').css({'text-align': 'center'});
+			$('#versus').hide();
+			$('#wleftn').hide();
+			$('#rbtn').hide();
+			$('#wrightn').css({'text-align':'center','padding-left':'0'}); 
+			$('#wright').animate({
+				left:'0',
+				width:'100%',
+				maxWidth:'100%'
+			},500,function(){
+			$.Movepg($('#wright').attr("name"),$('#wleft').attr("name"));
+			});
+		});
+		
+		$('#restart').click(function() {
+			$.ajax({
+				type : "POST",
+				url : "play_reset.php",
+				async: false,
+				success : function(data){
+					window.location.href = "5u2qx2";	
+				}
+			});
+		});
+		
+		$('#savecom').click(function () {
+			if($('#n').val()=='')
+			{
+				$('#n').focus();
+				return false;
+			}
+			if($('#c').val()=='')
+			{
+				$('#c').focus();
+				return false;
+			}
+			$.ajax({
+						type : "POST",
+						url : "https://www.piku.co.kr/w/play_save_com.php",
+						data : $("#form1").serialize(),
+						async: false,
+						success : function(data){
+							window.location.reload();
+						}
+			});
+		});
+		
+		$('#morelist').click(function () {
+			$.ajax({
+				type : "POST",
+				url : "https://www.piku.co.kr/w/play_comment.php",
+				cache : false,
+				data : "uid=5u2qx2&limit=" + $('#limit').val(),
+				async: false,
+				success : function(data){
+					if(data.length > 0)
+					{
+						$('.social-footer').append(data);
+						$('#limit').val(Number($('#limit').val())+20);
+					}
+					else
+					{
+						$("#morelist").text("마지막 의견입니다.");
+					}
+				}, error:function(request,status,error){
+					alert("code:"+request.status+"\n"+"message:"+request.responseText+"\n"+"error:"+error);
+				   }
+			});
+		});
+		
+			$('#morelist').trigger("click");
+	});
+	
+$(document).on("click", ".repcom", function () {
+		$msg = $(this);
+		$.ajax({
+					type : "POST",
+					url : "https://www.piku.co.kr/w/play_rep_com.php",
+					data : "uid=5u2qx2&cno=" + $(this).attr("data-no"),
+					async: false,
+					success : function(data){
+						$msg.next().text(data);
+						$msg.next().show();
+						$msg.next().fadeOut( 3000, function() {
+							 //Animation complete.
+						})
+					}
+		});
+});
+
+$(document).on("click", ".delcom", function () {
+		$.ajax({
+					type : "POST",
+					url : "https://www.piku.co.kr/w/play_del_com.php",
+					data : "uid=5u2qx2&cno=" + $(this).attr("data-no"),
+					async: false,
+					success : function(){
+						window.location.reload();
+					}
+		});
+});
+	
+	$.Animate = function(wid, ani) {
+		$('#' + wid).removeAttr('class').attr('class', '');
+		$('#' + wid).addClass('animated');
+		$('#' + wid).addClass(ani);
+	};
+	
+	$.Movepg= function(win,lose) {
+		$.ajax({
+			type : "POST",
+			url : "play.php",
+			data : "u=5u2qx2&p=&w=" + win + "&l=" + lose,
+			async: false,
+			success : function(){
+				setTimeout("window.location.replace ('5u2qx2');",1000); 
+			}
+		});
+	};
+
+</script>
+<script type="text/javascript" src="//wcs.naver.net/wcslog.js"></script>
+<script type="text/javascript">
+if(!wcs_add) var wcs_add = {};
+wcs_add["wa"] = "1405a1e2676195";
+wcs_do();
+</script>
+</body>
+</html>

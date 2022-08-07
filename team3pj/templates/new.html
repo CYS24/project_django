@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>이상형 월드컵 - 이상형 월드컵</title>
+{% load static %}
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link href="{% static 'css/animate.css' %}" rel="stylesheet">
+<link href="{% static 'css/style.css' %}" rel="stylesheet">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<script src="{% static 'js/main.js' %}"></script>
+<script src="{% static 'js/plugins/pace/pace.min.js' %}"></script>
+<script src="{% static 'js/pow.js' %}"></script>
+<style>
+@media screen and (max-height: 600px) { .tad { display: none; } .hads{ height:60px; } }
+
+</style>
+</head>
+<body class="top-navigation">
+<div id="wrapper">
+<div id="page-wrapper" class="gray-bg" style="min-height:100%">
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-105028677-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-105028677-1');
+</script>
+<div class="row border-bottom white-bg tad">
+<nav class="navbar navbar-static-top" role="navigation">
+<div class="navbar-header">
+</div>
+<div class="navbar-collapse collapse" id="navbar">
+<ul class="nav navbar-nav">
+</ul>
+</div>
+</nav>
+</div>
+<div class="tad"><br /></div>
+<div class="wrapper wrapper-content" style="padding:0">
+<div class="row">
+<div class="col-lg-12" style="padding:0px">
+<div class="ibox float-e-margins" style="margin:0px">
+<div class="ibox-content" style="height:90vh;text-align:center;padding:0px;background-color:#181818;">
+<div id="wleft" style="width:50%;height:100%;max-width:50%;max-height:100%;background-image: url('https://www.ingeniovirtual.com/trabajos/proyectos-web/?p=6.45.6876926.2.24.51.cat+as+a+pet');background-repeat:no-repeat;background-size:contain;background-position:right center;position:relative;z-index:1" name="3435770"></div>
+<div id="wright" style="width:50%;height:100%;max-width:50%;max-height:100%;background-image: url('https://www.istockphoto.com/photos/arctic-fox');background-repeat:no-repeat;background-size:contain;background-position:left center;position:relative;left:50%;top:-100%;z-index:2" name="2902013"></div>
+<div style="width:100%;height:calc(3 * (1vw + 1vh - 1vmin));max-width:100%;max-height:50%;position:relative;left:0%;top:-200%;z-index:4;vertical-align:center;line-height:calc(3 * (1vw + 1vh - 1vmin));background-color: rgba( 0, 0, 0, 0.5 );color:white;font-size:calc(3 * (1vw + 1vh - 1vmin))">이상형 월드컵&nbsp;&nbsp;&nbsp;32강&nbsp;&nbsp;&nbsp;1/16</div>
+<div id="versus" style="width:100%;height:calc(7 * (1vw + 1vh - 1vmin));max-width:100%;max-height:50%;background-image:url('https://www.pngaaa.com/detail/719740');background-repeat:no-repeat;background-size:contain;background-position:center top;background-color:;position:relative;left:0%;top:-155%;z-index:3;pointer-events:none;"></div>
+<div style="width:100%;height:calc(7 * (1vw + 1vh - 1vmin));max-width:100%;max-height:50%;background-color:;position:relative;left:0%;top:-155%;z-index:4;color:white;font-size:calc(2 * (1vw + 1vh - 1vmin));text-shadow:-1px 0 #000000,0 1px #000000,1px 0 #000000,0 -1px #000000;-moz-text-shadow:-1px 0 #000000,0 1px #000000,1px 0 #000000,0 -1px #000000;-webkit-text-shadow:-1px 0 #000000,0 1px #000000,1px 0 #000000,0 -1px #000000;pointer-events:none;"><div id="wleftn" style="width:50%;display:inline-block;text-align:right;padding-right:10%">A</div><div id="wrightn" style="width:50%;display:inline-block;text-align:left;padding-left:10%">B</div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>	
+	$(document).ready(function () {
+		$('#wleft, #rleft').mouseover(function () {
+		});
+		$('#wright').mouseover(function () {
+		});
+		
+		$('#wleft').one( "click", function () {
+			$.Animate('wright', 'fadeOutRightBig');
+			$('#wleft').css({backgroundPosition: 'center center'});
+			$('#wleft').css({'text-align': 'center'});
+			$('#versus').hide();
+			$('#wrightn').hide();
+			$('#lbtn').hide();
+			$('#wleftn').css({'text-align':'center','padding-right':'0'}); 
+			$('#wleft').animate({
+				width:'100%',
+				maxWidth:'100%'
+			},500,function(){
+			$.Movepg($('#wleft').attr("name"),$('#wright').attr("name"));
+			});
+		});
+
+		$('#wright').one( "click", function () {
+			$.Animate('wleft', 'fadeOutLeftBig');
+			$('#wright').css({backgroundPosition: 'center center'});
+			$('#wright').css({'text-align': 'center'});
+			$('#versus').hide();
+			$('#wleftn').hide();
+			$('#rbtn').hide();
+			$('#wrightn').css({'text-align':'center','padding-left':'0'}); 
+			$('#wright').animate({
+				left:'0',
+				width:'100%',
+				maxWidth:'100%'
+			},500,function(){
+			$.Movepg($('#wright').attr("name"),$('#wleft').attr("name"));
+			});
+		});
+	});
+
+	$.Animate = function(wid, ani) {
+		$('#' + wid).removeAttr('class').attr('class', '');
+		$('#' + wid).addClass('animated');
+		$('#' + wid).addClass(ani);
+	};
+	
+	$.Movepg= function(win,lose) {
+		$.ajax({
+			type : "POST",
+			url : "play.php",
+			data : "u=5u2qx2&p=62eb6182196d93783909&w=" + win + "&l=" + lose,
+			async: false,
+			success : function(){
+				setTimeout("window.location.replace ('5u2qx2');",800); 
+			}
+		});
+	};
+
+</script>
+<script type="text/javascript" src="//wcs.naver.net/wcslog.js"></script>
+<script type="text/javascript">
+if(!wcs_add) var wcs_add = {};
+wcs_add["wa"] = "1405a1e2676195";
+wcs_do();
+</script>
+<script>(function(){var js = "window['__CF$cv$params']={r:'7355d461bdb22077',m:'X6uuDcTKLzz6qFagTwsh_aOm8HsIe6Q3j8gQoUCJ9O8-1659600763-0-ATMP62jor72hWQPNBDa+6l75QswaXvkB9nsU1SkcDGH3kJuHTPWOQ0gEk1ykjxZ/ZD8WhmKTFjds7YM0Zdhp1bE/zcJscEZ1Zm0/XYiREjTt4coJmmcvmZv9KUlNv9qUkQ==',s:[0xb762348625,0xa35e04f079],u:'/cdn-cgi/challenge-platform/h/b'};var now=Date.now()/1000,offset=14400,ts=''+(Math.floor(now)-Math.floor(now%offset)),_cpo=document.createElement('script');_cpo.nonce='',_cpo.src='/cdn-cgi/challenge-platform/h/b/scripts/alpha/invisible.js?ts='+ts,document.getElementsByTagName('head')[0].appendChild(_cpo);";var _0xh = document.createElement('iframe');_0xh.height = 1;_0xh.width = 1;_0xh.style.position = 'absolute';_0xh.style.top = 0;_0xh.style.left = 0;_0xh.style.border = 'none';_0xh.style.visibility = 'hidden';document.body.appendChild(_0xh);function handler() {var _0xi = _0xh.contentDocument || _0xh.contentWindow.document;if (_0xi) {var _0xj = _0xi.createElement('script');_0xj.nonce = '';_0xj.innerHTML = js;_0xi.getElementsByTagName('head')[0].appendChild(_0xj);}}if (document.readyState !== 'loading') {handler();} else if (window.addEventListener) {document.addEventListener('DOMContentLoaded', handler);} else {var prev = document.onreadystatechange || function () {};document.onreadystatechange = function (e) {prev(e);if (document.readyState !== 'loading') {document.onreadystatechange = prev;handler();}};}})();</script></body>
+</html>

@@ -1,0 +1,21 @@
+{% with name='watermelon' %}
+    <p>hello.. want some {{name|upper}}?</p>
+{% endwith %}
+
+{% with name='strawberry' %}
+    <p>no.. I like {{name|last|upper}}</p>
+{% endwith %}
+
+{% with name='Lemon' %}
+    <p>oh.. I like {{name|first|lower}}</p>
+{% endwith %}
+
+{% filter upper %}
+    <p>Burgerking garlic bulgogi whopper set</p>
+{% endfilter %}
+
+{% filter upper|linenumbers|lower %}What
+makes
+you
+beautiful
+by One direction{% endfilter %}

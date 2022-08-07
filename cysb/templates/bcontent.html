@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<style>
+	a{text-decoration:none}
+</style>
+<meta charset="utf-8">
+<center>
+	<font color='gray' size='4' face='휴먼편지체'>
+	<hr width='600' size='2' color='gray' noshade>
+	<h3>Django Board</h3>
+	<font color='gray' size='4' face='휴먼편지체'>
+	<a href='../bwrite'>글쓰기</a>
+	</font>
+	<hr width='600' size='2' color='gray' noshade>
+	</font>
+
+	<table border='2' width='600' align='center' noshade>
+	<tr>
+	<td width='20%' align='center'>No</td>
+	<td>{{brd.id}}</td>
+	</tr>
+	<tr>
+	<td width='20%' align='center'>Writer</td>
+	<td>{{brd.writer}}</td>
+	</tr>
+	<tr>
+	<td align='center'>E-mail</td>
+	<td>{{brd.email}}</td>
+	</tr>
+	<tr>
+	<td align='center'>Subject</td>
+	<td>{{brd.subject}}</td>
+	</tr>
+	<tr>
+	<td align='center'>Contents</td>
+	<td>{{brd.content}}</td>
+	</tr>
+	</table>	
+	
+	<hr width='600' size='2' color='gray' noshade>
+	<font color='gray' size='4' face='휴먼편지체'>
+	<a href="../bupdate/{{brd.id}}">수정</a>
+	 &nbsp;&nbsp;| 
+	<a href='../bdelete/{{brd.id}}'>삭제</a>
+	 &nbsp;&nbsp;| 
+	<a href='../blist/'>글 목록</a>
+	</font>
+	<hr width='600' size='2' color='gray' noshade>
+</center>

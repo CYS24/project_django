@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>이상형월드컵</title>
+        <meta charset="utf-8">
+        <style>
+            video {
+                width: 300px;
+                height: 300px;
+            }
+        </style>
+    </head>
+    <body bgcolor="gray">
+		<script>
+			function change(n) {
+				if (cnt2 < 20) {
+					cnt++;
+					if (n == 0) 
+						sImages[sNum++] = arrNumber[num];
+					else 
+						sImages[sNum++] = arrNumber[num + 1];
+					num += 2;
+
+					showImg(num);
+
+					if (cnt == arrNumber.length / 2) {
+						for (i = 0; i < sImages.length; i++) {
+							arrNumber[i] = sImages[i];
+							sImages[i] = null;
+						}
+						arrNumber.splice(cnt); //앞에서 cnt개만 남김
+						cnt = 0;
+						num = 0;
+						sNum = 0;
+						showImg(num);
+					}
+				}
+			}
+		</script>
+        <center>
+            <h1>이상형 월드컵</h1>
+            <p id="cal"></p>
+            <video
+                id="li1"
+                onclick="change(0)"
+                autoplay=""
+                loop=""
+                muted=""
+                playsinline=""
+                style="position:inherit;z-index:0;width:49%;margin-right:1%;height:50%;object-position: 50% 10%; object-fit:cover; float:left; vertical-align:middle;"
+                poster="https://live.staticflickr.com/65535/49616605896_a61cef2aac_o_d.gif"
+				src="https://giant.gfycat.com/ImaginaryInconsequentialBasil.mp4">
+			</video>
+
+            <video
+                id="li2"
+                onclick="change(1)"
+                autoplay=""
+                loop=""
+                muted=""
+                playsinline=""
+                style="position:inherit;z-index:0;width:49%;margin-right:1%;height:50%;object-position: 50% 10%; object-fit:cover; float:left; vertical-align:middle;"
+                poster="https://live.staticflickr.com/65535/49616605896_a61cef2aac_o_d.gif"
+				src="https://giant.gfycat.com/ImaginaryInconsequentialBasil.mp4">
+			</video>
+			<script language="JavaScript">
+				var sImages = [];
+				var num = 0;
+				var cnt = 0;
+				var sNum = 0;
+				var cnt2 = 0;
+				function url_video() {
+					var arrNumber = new Array();
+					arrNumber[0] = "https://giant.gfycat.com/ImaginaryInconsequentialBasil.mp4";
+					arrNumber[1] = "https://giant.gfycat.com/AptCapitalDogfish.mp4";
+					arrNumber[2] = "https://giant.gfycat.com/JovialWhiteAddax.mp4";
+					arrNumber[3] = "https://giant.gfycat.com/WellgroomedScornfulJanenschia.mp4";
+					arrNumber[4] = "https://giant.gfycat.com/WavyHighlevelHammerheadbird.mp4";
+					arrNumber[5] = "https://t1.daumcdn.net/cfile/tistory/99230F4F5A98083A30";
+					arrNumber[6] = "https://img.khan.co.kr/news/2020/10/16/2020101601001687000138341.jpg";
+					arrNumber[7] = "https://i.pinimg.com/originals/8d/48/1a/8d481a6ab93f8644968921fa22c2c50c.png";
+	
+					arrNumber.sort(function(a,b){return 0.5 - Math.random()});
+					showImg(num);
+				}
+
+				url_video();
+
+				function showImg(num) {
+					document.getElementById('li1').src = arrNumber[num];
+					document.getElementById('li2').src = arrNumber[num + 1];
+					cnt2++;
+				}			
+			</script>
+        </center>
+    </body>
+</html>

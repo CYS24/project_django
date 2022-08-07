@@ -1,0 +1,53 @@
+{% if x == 1 %}
+    <p>one</p>
+{% elif x == 2 %}
+    <p>two</p>
+{% else %}
+    <p>other</p>
+{% endif %}
+
+{% if y %}
+    <p>y is not empty</p>
+{% else %}
+    <p>y is empty</p>
+    {% comment %} None, NULL도 empty {% endcomment %}
+{% endif %}
+
+{% if x != 1 %}
+    <p>x is not 1</p>
+{% endif %}
+
+{% if x < 5 %}
+    <p>x is less than 5</p>
+{% endif %}
+
+{% if x == 2 and y == 'brown' or x == 3 %}
+    <p>correct!</p>
+{% endif %}
+
+{% if 'orange' in fruits %}
+    <p>orange man</p>
+{% else %}
+    <p>norange</p>
+{% endif %}
+
+{% if x is z %}
+    <p>x equal z</p>
+    {% comment %} 다른 두 변수의 값이 같으면 두 변수는 같다고 본다 {% endcomment %}
+{% else %}
+    <p>x not equal z</p>
+{% endif %}
+
+{% if fruits is fruits2 %} 
+    <p>fruits equal fruits2</p>    
+{% else %}
+    <p>fruits not equal fruits2</p>
+    {% comment %} is연산은 컬렉션 요소가 같더라도 다른 객체로 봄 {% endcomment %}
+{% endif %}
+
+{% if fruits == fruits2 %}
+    <p>fruits equal fruits2</p>    
+    {% comment %} == 과 is연산은 다르다 (데이터를 비교 / 객체를 비교) {% endcomment %}
+{% else %}
+    <p>fruits not equal fruits2</p>    
+{% endif %}
