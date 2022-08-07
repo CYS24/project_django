@@ -40,7 +40,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'cysb.apps.CysbConfig',
     'team3pj.apps.Team3PjConfig',
-    'bootstrap4'
 ]
 
 MIDDLEWARE = [
